@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.landing{
+    height: 65vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.25);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 20.0px );
+    -webkit-backdrop-filter: blur( 20.0px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    /*background: url(https://picsum.photos/1200?random=3)
+    background-size: cover;
+    background-attachment: fixed;*/
+}
+
+body{
+    color: black;
+    font-family: sans-serif;
+    
+}
+h1{
+    text-transform: uppercase;
+}
+
+.timeline-container{
+    background-image: url(https://picsum.photos/1200?random=3);
+    background-size: cover;
+    background-attachment: fixed;
+    display: grid;
+    grid-template-columns: 1fr 10% 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    align-items: center;
+    justify-items: center;
+    padding: 10%;
+}
+
+.timeline-line {
+    width: 10px;
+    height: 100%;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 5;
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+  }
+
+.timeline-item {
+    font: bold;
+    font-family: sans-serif;
+    background-color: lightgrey;
+    color:black;
+    background: rgba(238, 7, 7, 0);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 15.0px );
+    -webkit-backdrop-filter: blur( 15.0px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+}
+
+.item-1 {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.item-2 {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.item-3 {
+    grid-column: 3;
+    grid-row: 3;
+}
+
+.item-4 {
+    grid-column: 1;
+    grid-row: 4;
+}
+
+@media screen and (max-width: 800px) {
+    .timeline-container {
+      grid-template-columns: 10% 1fr;
+    }
+  
+    .line {
+      grid-column-start: 1;
+    }
+  
+    .timeline-item {
+      grid-column: 2;
+    }
+  }
